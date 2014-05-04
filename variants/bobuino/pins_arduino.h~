@@ -31,7 +31,11 @@
 
 #define NUM_DIGITAL_PINS            32
 #define NUM_ANALOG_INPUTS           8
-#define analogInputToDigitalPin(p)  ((p < NUM_ANALOG_INPUTS) ? (p) + 14 : -1)
+#define analogInputToDigitalPin(p)  ((p < NUM_ANALOG_INPUTS) ? 21 - (p) : -1)
+
+extern const uint8_t digital_pin_to_pcint[NUM_DIGITAL_PINS];
+extern const uint16_t __pcmsk[];
+extern const uint8_t digital_pin_to_timer_PGM[NUM_DIGITAL_PINS];
 
 #define ifpin(p,what,ifnot)	    (((p) >= 0 && (p) < NUM_DIGITAL_PINS) ? (what) : (ifnot))
 #define digitalPinHasPWM(p)         ifpin(p,pgm_read_byte(digital_pin_to_timer_PGM + (p)) != NOT_ON_TIMER,1==0)

@@ -9,6 +9,9 @@ This is a refreshed version of [maniacbug's mighty-1284p core](https://github.co
 
 ## Revision history <a name="revision history"></a>
 
+**28Apr2015 per1234**
+- Arduino 1.5+ compatibility. Mighty 1284P is now compatible with Arduino IDE version 1.5+ as well as maintaining compatibility with 1.0.x. Updated versions of the Ethernet and GSM libraries are in patched-libs\official\IDE1.5+compatible.
+
 **29Oct2014 Jack Christensen**
 - The following changes are in a branch named v1.0.6. The v1.0.5 branch will remain the default for the time being, until the v1.0.6 branch can be tested further.
 - With the release of Arduino 1.0.6, changes to the core files are no longer needed to support the ATmega1284P. Deleted the Mighty 1284P cores directory pointed all boards in the boards.txt file to the regular Arduino core.
@@ -39,18 +42,20 @@ This is a refreshed version of [maniacbug's mighty-1284p core](https://github.co
 4. Unzip the downloaded file into the **hardware** folder.
 5. The download from GitHub will have a dash and branch name appended, so the folder will be named, e.g. mighty-1284p-master or mighty-1284p-v1.0.5. Rename the folder to just **mighty-1284p**.
 6. The following folders and files should now exist:
+	- sketchbook\hardware\mighty-1284p\avr
 	- sketchbook\hardware\mighty-1284p\bootloaders
 	- sketchbook\hardware\mighty-1284p\cores
+	- sketchbook\hardware\mighty-1284p\patched-libs	
 	- sketchbook\hardware\mighty-1284p\variants
-	- sketchbook\hardware\mighty-1284p\\.gitignore
-	- sketchbook\hardware\mighty-1284p\README.txt
+	- sketchbook\hardware\mighty-1284p\.gitignore
+	- sketchbook\hardware\mighty-1284p\README.md
 	- sketchbook\hardware\mighty-1284p\boards.txt
 7. Restart the Arduino IDE.
 8. Select the desired board from the Tools > Board menu and enjoy those extra pins and all that extra memory!
 
 ## Requirements <a name="requirements"></a>
 
-* Works with Arduino 1.0.5. It may work on other versions as early as 1.0.1 but these have not been tested.
+* Works with Arduino 1.0.5 and 1.6.3. It may work on other versions as early as 1.0.1 but these have not been tested.
 * The [USBtinyISP](http://www.adafruit.com/products/46) is advertised as not able to program chips with more than 64K of flash, however there are varying reports of success using it with the ATmega1284P. Sometimes error messages are given but the upload process seems to have worked OK. Be forewarned. YMMV.
 
 ## See also <a name="seealso"></a>

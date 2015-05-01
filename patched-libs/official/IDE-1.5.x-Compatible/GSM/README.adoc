@@ -1,6 +1,6 @@
 = GSM Library for Arduino =
 
-With the Arduino GSM Shield, this library enables an Arduino board to do most of the operations you can do with a GSM phone: place and receive voice calls, send and receive SMS, and connect to the internet over a GPRS network. 
+With the Arduino GSM Shield, this library enables an Arduino board to do most of the operations you can do with a GSM phone: place and receive voice calls, send and receive SMS, and connect to the internet over a GPRS network.  Patched to support ATmega1284, ATmega1284P, ATmega644, ATmega644A, ATmega644P, and ATmega644PA.
 
 For more information about this library please visit us at
 http://arduino.cc/en/Reference/GSM

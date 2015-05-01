@@ -343,6 +343,12 @@ private:
   inline static void initSS()    { DDRB  |=  _BV(0); };
   inline static void setSS()     { PORTB &= ~_BV(0); };
   inline static void resetSS()   { PORTB |=  _BV(0); }; 
+#elif defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) \
+  || defined(__AVR_ATmega644__)  || defined(__AVR_ATmega644A__) \
+  || defined(__AVR_ATmega644P__)  || defined(__AVR_ATmega644PA__)
+  inline static void initSS()    { DDRB  |=  _BV(4); }
+  inline static void setSS()     { PORTB &= ~_BV(4); }
+  inline static void resetSS()   { PORTB |=  _BV(4); }
 #else
   inline static void initSS()    { DDRB  |=  _BV(2); };
   inline static void setSS()     { PORTB &= ~_BV(2); };

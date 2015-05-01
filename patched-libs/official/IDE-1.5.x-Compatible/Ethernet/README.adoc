@@ -1,8 +1,8 @@
 = Ethernet Library for Arduino =
 
-With the Arduino Ethernet Shield, this library allows an Arduino board to connect to the internet.
+With the Arduino Ethernet Shield, this library allows an Arduino board to connect to the internet with the Arduino Ethernet Shield, or any other hardware using the W5100 Ethernet controller chip. This library has been modified from the original Arduino version to support ATmega1284, ATmega1284P, ATmega644, ATmega644A, ATmega644P, and ATmega644PA
 
-For more information about this library please visit us at
+For more information about this library see:
 http://arduino.cc/en/Reference/Ethernet
 
 == License ==

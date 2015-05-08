@@ -54,7 +54,8 @@ This is a refreshed version of [maniacbug's mighty-1284p core](https://github.co
 	- hardware\mighty-1284p\README.md
 7. Move any mighty-1284p compatible 3rd party patched libs under [sketchfolder]\libraries as required. (Note: the mighty-1284p compatible "official" patched libs are already set-up to be used as default when using mighty-1284p by being in avr\libraries. If the wrong libs are being used, check to see that there aren't old versions of the patched libs still under [sketchfolder]\libraries, as those would take precedence.)
 8. Restart the Arduino IDE.
-9. Select the desired board from the Tools > Board menu and enjoy those extra pins and all that extra memory!
+9. Select the desired board from the Tools > Board menu.
+10. Select the oscillator setting from the Tools > Clock menu and enjoy those extra pins and all that extra memory!
 
 ## Requirements <a name="requirements"></a>
 

@@ -1,14 +1,14 @@
+menu.clock=Clock
 
 ##############################################################
 
-avr_developers.name=avr-developers.com pinouts 16MHz using Optiboot
+avr_developers.name=avr-developers.com pinout
 avr_developers.upload.tool=arduino:avrdude
 avr_developers.upload.protocol=arduino
 avr_developers.upload.maximum_data_size=16384
 avr_developers.upload.maximum_size=130048
 avr_developers.upload.speed=115200
 avr_developers.bootloader.tool=arduino:avrdude
-avr_developers.bootloader.low_fuses=0xf7
 avr_developers.bootloader.high_fuses=0xde
 avr_developers.bootloader.extended_fuses=0xfd
 avr_developers.bootloader.file=optiboot/optiboot_atmega1284p.hex
@@ -19,16 +19,36 @@ avr_developers.build.f_cpu=16000000L
 avr_developers.build.core=arduino:arduino
 avr_developers.build.variant=avr_developers
 
+# 16Mhz Full Swing - more resistant to electrical interference than Low Power
+avr_developers.menu.clock.full_swing=16Mhz Full Swing
+avr_developers.menu.clock.full_swing.bootloader.low_fuses=0xf7
+
+# 16Mhz Full Swing @ 1Mbps
+avr_developers.menu.clock.1M=16Mhz @ 1Mbps
+avr_developers.menu.clock.1M.upload.speed=1000000
+avr_developers.menu.clock.1M.bootloader.low_fuses=0xf7
+avr_developers.menu.clock.1M.bootloader.file=optiboot/optiboot_mighty1284p_1M.hex
+
+# 16Mhz Low Power
+avr_developers.menu.clock.low_power=16Mhz Low Power
+avr_developers.menu.clock.low_power.bootloader.low_fuses=0xff
+
+# 8Mhz Internal
+avr_developers.menu.clock.8Mhz=8Mhz Internal
+avr_developers.menu.clock.8Mhz.bootloader.low_fuses=0xe2
+avr_developers.menu.clock.8Mhz.upload.speed=500000
+avr_developers.menu.clock.8Mhz.bootloader.file=optiboot/optiboot_1284p_8MHz_500k.hex
+avr_developers.menu.clock.8Mhz.build.f_cpu=8000000L
+
 ##############################################################
 
-bobuino.name=Bobuino and Skinny Bob
+bobuino.name=Bobuino or Skinny Bob
 bobuino.upload.tool=arduino:avrdude
 bobuino.upload.protocol=arduino
 bobuino.upload.maximum_data_size=16384
 bobuino.upload.maximum_size=130048
 bobuino.upload.speed=115200
 bobuino.bootloader.tool=arduino:avrdude
-bobuino.bootloader.low_fuses=0xf7
 bobuino.bootloader.high_fuses=0xde
 bobuino.bootloader.extended_fuses=0xfd
 bobuino.bootloader.file=optiboot/optiboot_atmega1284p.hex
@@ -39,64 +59,64 @@ bobuino.build.f_cpu=16000000L
 bobuino.build.core=arduino:arduino
 bobuino.build.variant=bobuino
 
+# 16Mhz Full Swing - more resistant to electrical interference than Low Power
+bobuino.menu.clock.full_swing=16Mhz Full Swing
+bobuino.menu.clock.full_swing.bootloader.low_fuses=0xf7
+
+# 16Mhz Full Swing @ 1Mbps
+bobuino.menu.clock.1M=16Mhz @ 1Mbps
+bobuino.menu.clock.1M.upload.speed=1000000
+bobuino.menu.clock.1M.bootloader.low_fuses=0xf7
+bobuino.menu.clock.1M.bootloader.file=optiboot/optiboot_mighty1284p_1M.hex
+
+# 16Mhz Low Power
+bobuino.menu.clock.low_power=16Mhz Low Power
+bobuino.menu.clock.low_power.bootloader.low_fuses=0xff
+
+# 8Mhz Internal
+bobuino.menu.clock.8Mhz=8Mhz Internal
+bobuino.menu.clock.8Mhz.bootloader.low_fuses=0xe2
+bobuino.menu.clock.8Mhz.upload.speed=500000
+bobuino.menu.clock.8Mhz.bootloader.file=optiboot/optiboot_1284p_8MHz_500k.hex
+bobuino.menu.clock.8Mhz.build.f_cpu=8000000L
+
 ##############################################################
 
 #http://github.com/JChristensen/mini1284
-mightymini.name=Mighty Mini 1284p @ 16MHz, Optiboot @ 1Mbps
-mightymini.upload.tool=arduino:avrdude
-mightymini.upload.protocol=arduino
-mightymini.upload.maximum_data_size=16384
-mightymini.upload.maximum_size=130048
-mightymini.upload.speed=1000000
-mightymini.bootloader.tool=arduino:avrdude
-mightymini.bootloader.low_fuses=0xf7
-mightymini.bootloader.high_fuses=0xde
-mightymini.bootloader.extended_fuses=0xfd
-mightymini.bootloader.file=optiboot/optiboot_mighty1284p_1M.hex
-mightymini.bootloader.unlock_bits=0x3F
-mightymini.bootloader.lock_bits=0x0F
-mightymini.build.mcu=atmega1284p
-mightymini.build.f_cpu=16000000L
-mightymini.build.core=arduino:arduino
-mightymini.build.variant=standard
+mighty.name="maniacbug" Mighty 1284P or Mighty Mini 1284P
+mighty.upload.tool=arduino:avrdude
+mighty.upload.protocol=arduino
+mighty.upload.maximum_data_size=16384
+mighty.upload.maximum_size=130048
+mighty.upload.speed=115200
+mighty.bootloader.tool=arduino:avrdude
+mighty.bootloader.high_fuses=0xde
+mighty.bootloader.extended_fuses=0xfd
+mighty.bootloader.file=optiboot/optiboot_atmega1284p.hex
+mighty.bootloader.unlock_bits=0x3F
+mighty.bootloader.lock_bits=0x0F
+mighty.build.mcu=atmega1284p
+mighty.build.f_cpu=16000000L
+mighty.build.core=arduino:arduino
+mighty.build.variant=standard
 
-##############################################################
+# 16Mhz Full Swing - more resistant to electrical interference than Low Power
+mighty.menu.clock.full_swing=16Mhz Full Swing
+mighty.menu.clock.full_swing.bootloader.low_fuses=0xf7
 
-#http://github.com/JChristensen/mini1284
-mm8.name=Mighty Mini 1284p @ 8MHz
-mm8.upload.tool=arduino:avrdude
-mm8.upload.protocol=arduino
-mm8.upload.maximum_data_size=16384
-mm8.upload.maximum_size=130048
-mm8.upload.speed=500000
-mm8.bootloader.tool=arduino:avrdude
-mm8.bootloader.low_fuses=0xe2
-mm8.bootloader.high_fuses=0xde
-mm8.bootloader.extended_fuses=0xfd
-mm8.bootloader.file=optiboot/optiboot_1284p_8MHz_500k.hex
-mm8.bootloader.unlock_bits=0x3F
-mm8.bootloader.lock_bits=0x0F
-mm8.build.mcu=atmega1284p
-mm8.build.f_cpu=8000000L
-mm8.build.core=arduino:arduino
-mm8.build.variant=standard
+# 16Mhz Full Swing @ 1Mbps
+mighty.menu.clock.1M=16Mhz @ 1Mbps
+mighty.menu.clock.1M.upload.speed=1000000
+mighty.menu.clock.1M.bootloader.low_fuses=0xf7
+mighty.menu.clock.1M.bootloader.file=optiboot/optiboot_mighty1284p_1M.hex
 
-##############################################################
+# 16Mhz Low Power
+mighty.menu.clock.low_power=16Mhz Low Power
+mighty.menu.clock.low_power.bootloader.low_fuses=0xff
 
-mighty_opt.name="maniacbug" Mighty 1284p 16MHz using Optiboot
-mighty_opt.upload.tool=arduino:avrdude
-mighty_opt.upload.protocol=arduino
-mighty_opt.upload.maximum_data_size=16384
-mighty_opt.upload.maximum_size=130048
-mighty_opt.upload.speed=115200
-mighty_opt.bootloader.tool=arduino:avrdude
-mighty_opt.bootloader.low_fuses=0xf7
-mighty_opt.bootloader.high_fuses=0xde
-mighty_opt.bootloader.extended_fuses=0xfd
-mighty_opt.bootloader.file=optiboot/optiboot_atmega1284p.hex
-mighty_opt.bootloader.unlock_bits=0x3F
-mighty_opt.bootloader.lock_bits=0x0F
-mighty_opt.build.mcu=atmega1284p
-mighty_opt.build.f_cpu=16000000L
-mighty_opt.build.core=arduino:arduino
-mighty_opt.build.variant=standard
+# 8Mhz Internal
+mighty.menu.clock.8Mhz=8Mhz Internal
+mighty.menu.clock.8Mhz.bootloader.low_fuses=0xe2
+mighty.menu.clock.8Mhz.upload.speed=500000
+mighty.menu.clock.8Mhz.bootloader.file=optiboot/optiboot_1284p_8MHz_500k.hex
+mighty.menu.clock.8Mhz.build.f_cpu=8000000L

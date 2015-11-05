@@ -59,9 +59,15 @@ This is a refreshed version of [maniacbug's mighty-1284p core](https://github.co
 	- hardware\mighty-1284p\avr\boards.txt.alt
 	- hardware\mighty-1284p\.gitignore
 	- hardware\mighty-1284p\README.md
-7. Move any mighty-1284p compatible 3rd party patched libs under [sketchfolder]\libraries as required. (Note: the mighty-1284p compatible "official" patched libs are already set-up to be used as default when using mighty-1284p by being in avr\libraries. If the wrong libs are being used, check to see that there aren't old versions of the patched libs still under [sketchfolder]\libraries, as those would take precedence.)
-8. Restart the Arduino IDE.
-9. Select the desired board from the Tools > Board menu and enjoy those extra pins and all that extra memory!
+7. Move any mighty-1284p compatible 3rd party patched libs under **[sketchfolder]\libraries** as required.
+8. The mighty-1284p compatible "official" patched libs are already set-up to be used as default when a mighty-1284p board is selected in the **Board** menu by being in **hardware\mighty-1284p\avr\libraries**. Versions of any of these libraries located in **[sketchfolder]\libraries** will take precedence over the mighty-1284p patched version. **Library Manager** installs and updates libraries to **[sketchfolder]\libraries**. When installing mighty-1284p, and after updating any of the following libraries using **Library Manager**, you must move those libraries from **[sketchfolder]\libraries** to **[Arduino install folder]\libraries** which will cause the mighty-1284p patched libraries to take precedence when a mighty-1284p board is selected.
+    - Ethernet
+    - Firmata
+    - GSM
+    - SD
+    - Servo
+9. Restart the Arduino IDE.
+10. Select the desired board from the Tools > Board menu and enjoy those extra pins and all that extra memory!
 
 Note: There is an alternative version of the boards.txt file supplied named boards.txt.alt. It provides more combinations of boards and clock speeds than the standard boards.txt selection menu. It uses a two-step selection of board type and then clock-speed via a submenu. As this differs from the standard boards.txt format, it is provided as an option for those users with more specialized needs, while the default boards.txt retains the more familiar style of interface, to minimise any potential for confusion.
 

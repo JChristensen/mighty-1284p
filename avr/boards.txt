@@ -147,3 +147,28 @@ sleepingbeauty.build.variant=sleepingbeauty
 sleepingbeauty.build.board=1284P_SLEEPINGBEAUTY
 
 ##############################################################
+
+windlogger.name=Windlogger digital Board, 16MHz using Optiboot
+# Windlogger: http://crossroadsfencing.com/BobuinoRev17/index.html
+
+windlogger.upload.tool=arduino:avrdude
+windlogger.upload.protocol=arduino
+windlogger.upload.maximum_data_size=16384
+windlogger.upload.maximum_size=130048
+windlogger.upload.speed=115200
+
+windlogger.bootloader.tool=arduino:avrdude
+windlogger.bootloader.low_fuses=0xf7
+windlogger.bootloader.high_fuses=0xde
+windlogger.bootloader.extended_fuses=0xfd
+windlogger.bootloader.file=optiboot/optiboot_atmega1284p.hex
+windlogger.bootloader.unlock_bits=0x3F
+windlogger.bootloader.lock_bits=0x0F
+
+windlogger.build.mcu=atmega1284p
+windlogger.build.f_cpu=16000000L
+windlogger.build.core=arduino:arduino
+windlogger.build.variant=windlogger
+windlogger.build.board=1284P_WINDLOGGER
+
+##############################################################

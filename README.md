@@ -108,4 +108,5 @@ http://maniacbug.wordpress.com/2011/11/27/arduino-on-atmega1284p-4/
 * **RFX 1284P Development/Deployment Board** (a.k.a. "Skinny Bob") from [Embedded Coolness](http://embeddedcoolness.com/shop/rfx-1284p-devdep-board-w-prototyping-area-nrf24l01-headers-kit/); also built for maximum compatibility with Arduino Uno-class shields, has prototyping area, configurable 5V/3v3 voltage selection, and nRF24L01+ support.
 * **Mighty Mini 1284P** - A small breadboard-friendly version of the Mighty 1284p built with SMT components. Open-source design [available on GitHub](http://goo.gl/5fAHca).
 * **"maniacbug" Mighty 1284p 16MHz using Optiboot** - This uses a straightforward pinout that is especially helpful on a breadboard-built unit.
+* **"Windlogger Digital Board"** [Digital Board](https://github.com/netbomo/windlogger_digital) Just an other arduino board based on the Atmega1284p. Unfortunatly pinout are close to the bobuino but not exact.
 
